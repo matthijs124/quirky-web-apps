@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Quadratic Formula App</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Quadratic Formula App</h1>
+            <p>A simple app that finds x-values for a user-inputted quadratic equation.</p> 
+        </header>
+
+        <main>
+            <section class="user-input">
+                <label class="line" id="first-text">Quadratic equation:</label>
+                <input type="text" id="power-2">
+                <label class="line">x² + </label>
+                <input type="text" id="power-1">
+                <label class="line">x + </label>
+                <input type="text" id="power-0">
+            </section>
+
+            <button><b>Calculate</b></button>
+            
+            <section class="output">
+                <p class="outputp">x1 = </p><p class="outputp" id="root-1">-</p>
+                <p class="outputp">x2 = </p><p class="outputp" id="root-2">-</p>
+            </section>
+        </main>
+
+        <footer>
+            <p class="footer">Developed by B.M. Doolaar</p>
+        </footer>
+       
+
+        <script src = "http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script src = "app.js"></script>
+    </body>
+</html>

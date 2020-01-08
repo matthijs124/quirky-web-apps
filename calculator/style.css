@@ -1,0 +1,57 @@
+body {
+    background: beige;
+    font-family: "Arial";
+    font-size: 25px;
+    color: darkblue;
+}
+
+input {
+    float: left;
+    width: 3%;
+    margin: 5px;
+}
+
+.line {
+    float: left;
+}
+
+#first-text {
+    margin-right: 15px;
+}
+
+button {
+    border-style: solid;
+    border-color: darkblue;
+    color: darkblue;
+    border-width: 1.5px;
+    margin-left: 30px;
+    background-color: lightgoldenrodyellow;
+    height: 20px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.outputp {
+    margin-left: 50px;
+}
+
+.output {
+    background-color: white;
+    width: 300px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: darkblue;
+}
+
+.footer {
+    font-size: 15px;
+}
+
+p, h1, section, p:not(.outputp) {
+    margin-left: 40px;
+}

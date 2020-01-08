@@ -1,0 +1,49 @@
+div {
+    clear: both;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+#greeting {
+    float: left;
+    margin-right: 8px;
+}
+
+#city {
+    float: right;
+    margin-left: 8px;
+}
+
+h1 {
+    font-family: "Arial";
+    font-size: 60px;
+}
+
+.white {
+    color: white;
+}
+
+p {
+    font-family: "Arial";
+    font-size: 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 99%
+}
+
+body {
+    background-color: beige;
+}
+
+.black {
+    background-color: black;
+}
