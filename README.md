@@ -1,4 +1,4 @@
-# quirky-web-apps
+# Quirky web apps
 Collection of small web apps that may or may not be useful. 
 
-Testing
+- B.M. Doolaar
