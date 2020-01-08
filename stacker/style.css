@@ -1,0 +1,40 @@
+body {
+    background-color: lightskyblue;
+    font-family: Arial;
+}
+
+div {
+    margin: 35px;
+}
+
+#leftdiv {
+    display: inline-block;
+    background-color: beige;
+    width: 350px;
+    position: absolute;
+}
+
+#rightdiv {
+    display: inline-block;
+    background-color: lightpink;
+    width: 100px;
+    position: absolute;
+    left: 400px;
+    border-top: 5px solid black;
+    height: 250px;
+    vertical-align: bottom;
+    transform: rotate(180deg);
+}
+
+button {
+    margin-right: 20px;
+    width: 40%;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    bottom: 0;
+    transform: rotate(180deg);
+}
