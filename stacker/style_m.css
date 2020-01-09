@@ -1,0 +1,11 @@
+body {
+    background-color: lightskyblue;
+    font-family: Arial;
+}
+
+#leftdiv {
+    background-color: lightblue;
+    margin: 35px;
+    width: 350px;
+    position: absolute;
+}

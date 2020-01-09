@@ -50,7 +50,7 @@ var main = function () {
         if (secretCountNeg === 9) {
             secretCountPos = 0;
             $("#alertbox").empty();
-            $("#alertbox").append("<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>Click here</a>");
+            $("#alertbox").append("<a id='roll' href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>Click here</a>");
         }
     });
 
