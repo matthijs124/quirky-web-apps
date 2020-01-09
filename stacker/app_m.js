@@ -3,10 +3,11 @@ var main = function () {
 
     var stacks = [0, 0, 0, 0, 0, 0, 0];
     var totalBoxes = 0;
+    var gameEnd = false;
 
     $(".column").on("click", function (event) {
         var index = $(this).index(); 
-        if (stacks[index] < 6) {
+        if (stacks[index] < 6 && gameEnd == false) {
             stacks[index]++;
             if (totalBoxes % 2 === 0) {
                 $("#"+ (index+1) + "_" + stacks[index]).append("<img src='delftbox.png'>");
@@ -22,7 +23,11 @@ var main = function () {
                 
                 updateboard(index, 1);
                 if (checkwin(board, 1, index)) {
-                    console.log("BLUE HAS WON ---------")
+                    $("#turnbox").empty();
+                    $("#turnbox").append("<img src='delftbox.png' class='turn-img'>");
+                    $("#turnbox").append("<span><p class='turn-p'>BLUE VICTORY</p></span>");
+                    $("body").css("background-color", "rgb(0, 166, 214)");
+                    gameEnd = true;
                 }
 
             } else {
@@ -39,13 +44,16 @@ var main = function () {
 
                 updateboard(index, 2);
                 if (checkwin(board, 2, index)) {
-                    console.log("RED HAS WON ---------")
+                    $("#turnbox").empty();
+                    $("#turnbox").append("<img src='delftboxred.png' class='turn-img'>");
+                    $("#turnbox").append("<span><p class='turn-p'>RED VICTORY</p></span>");
+                    $("body").css("background-color", "rgb(245, 66, 66)");
+                    gameEnd = true;
                 }
             }
             totalBoxes++;
         }
         
-
         console.log(stacks);
         console.log(totalBoxes);
         
@@ -67,6 +75,7 @@ var main = function () {
     $("button").on("click", function (event) {
         $("li").empty();
         $("#turnbox").empty();
+        gameEnd = false;
         totalBoxes = 0;
         stacks = [0, 0, 0, 0, 0, 0, 0];
         board = [
@@ -83,6 +92,8 @@ var main = function () {
             [9,9,9,9,9,9,9,9,9,9,9,9,9],
             [9,9,9,9,9,9,9,9,9,9,9,9,9],
             [9,9,9,9,9,9,9,9,9,9,9,9,9]];
+        
+        $("body").css("background-color", "lightsteelblue");
     });
 
     var board = [
