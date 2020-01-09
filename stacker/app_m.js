@@ -8,31 +8,58 @@ var main = function () {
         var index = $(this).index(); 
         if (stacks[index] < 6) {
             stacks[index]++;
+            if (totalBoxes % 2 === 0) {
+                $("#"+ (index+1) + "_" + stacks[index]).append("<img src='delftbox.png'>");
+                $(this).css("background-color", "rgb(245, 66, 66)");
+    
+                if (totalBoxes < 41) {
+                    $("#turnbox").empty();
+                    $("#turnbox").append("<img src='delftboxred.png' class='turn-img'>");
+                    $("#turnbox").append("<span><p class='turn-p'>Red's turn</p></span>");
+                } else {
+                    $("#turnbox").empty();
+                }
+    
+            } else {
+                $("#"+ (index+1) + "_" + stacks[index]).append("<img src='delftboxred.png'>");
+                $(this).css("background-color", "rgb(0, 166, 214)");
+
+                if (totalBoxes < 41) {
+                    $("#turnbox").empty();
+                    $("#turnbox").append("<img src='delftbox.png' class='turn-img'>");
+                    $("#turnbox").append("<span><p class='turn-p'>Blue's turn</p></span>");
+                } else {
+                    $("#turnbox").empty();
+                }
+            }
+            totalBoxes++;
         }
-        if (totalBoxes % 2 === 0) {
-            $("#"+ (index+1) + "_" + stacks[index]).append("<img src='delftbox.png'>");
-            $(this).css("background-color", "red");
-        } else {
-            $("#"+ (index+1) + "_" + stacks[index]).append("<img src='delftboxred.png'>");
-            $(this).css("background-color", "blue");
-        }
+        
 
         console.log(stacks);
-        totalBoxes++;
+        console.log(totalBoxes);
+        
     });
 
     $(".column").hover( 
         function() {
             if (totalBoxes % 2 === 0) {
-                $(this).css("background-color", "blue");
+                $(this).css("background-color", "rgb(0, 166, 214)");
             } else {
-                $(this).css("background-color", "red");
+                $(this).css("background-color", "rgb(245, 66, 66)");
             }
            
         }, function() {
-            $(this).css("background-color", "pink");
+            $(this).css("background-color", "white");
         }
     );
+
+    $("button").on("click", function (event) {
+        $("li").empty();
+        $("#turnbox").empty();
+        totalBoxes = 0;
+        stacks = [0, 0, 0, 0, 0, 0, 0];
+    });
 };
 
 $(document).ready(main);

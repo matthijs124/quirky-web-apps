@@ -1,17 +1,22 @@
 body {
-    background-color: gold;
+    background-color: lightsteelblue;
     font-family: Arial;
 }
 
 #leftdiv {
-    background-color: lightblue;
     margin: 35px;
     width: 350px;
+    height: 500px;
     position: absolute;
 }
 
+#turnbox {
+    margin-top: 50px;
+    height: 50px;
+}
+
 #wrapper {
-    background-color: beige;
+    background-color: whitesmoke;
     margin: 35px;
     position: absolute;
     width: 377px;
@@ -21,7 +26,7 @@ body {
 }
 
 .column {
-    background-color: pink;
+    background-color: white;
     width: 50px;
     height: 300px;
     display: inline-block;
@@ -48,4 +53,22 @@ ul {
 img {
     margin: 0px;
     display: block;
+}
+
+.turn-img {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+span {
+    display: inline-block;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.turn-p {
+    font-size: 25px;
+    margin: 0;
 }
