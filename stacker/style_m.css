@@ -9,3 +9,43 @@ body {
     width: 350px;
     position: absolute;
 }
+
+#wrapper {
+    background-color: beige;
+    margin: 35px;
+    position: absolute;
+    width: 377px;
+    height: 300px;
+    left: 385px;
+    border-bottom: 5px solid black;
+}
+
+.column {
+    background-color: pink;
+    width: 50px;
+    height: 300px;
+    display: inline-block;
+    top: 0;
+}
+
+.column:hover {
+    background-color: red;
+}
+
+li {
+    display: block;
+    margin: 0px;
+    width: 50px;
+    height: 50px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    margin: 0px;
+    display: block;
+}

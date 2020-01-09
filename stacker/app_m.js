@@ -11,15 +11,28 @@ var main = function () {
         }
         if (totalBoxes % 2 === 0) {
             $("#"+ (index+1) + "_" + stacks[index]).append("<img src='delftbox.png'>");
+            $(this).css("background-color", "red");
         } else {
             $("#"+ (index+1) + "_" + stacks[index]).append("<img src='delftboxred.png'>");
+            $(this).css("background-color", "blue");
         }
 
         console.log(stacks);
         totalBoxes++;
     });
 
-    
+    $(".column").hover( 
+        function() {
+            if (totalBoxes % 2 === 0) {
+                $(this).css("background-color", "blue");
+            } else {
+                $(this).css("background-color", "red");
+            }
+           
+        }, function() {
+            $(this).css("background-color", "pink");
+        }
+    );
 };
 
 $(document).ready(main);
