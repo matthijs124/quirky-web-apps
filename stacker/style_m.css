@@ -25,6 +25,14 @@ body {
     border-bottom: 5px solid black;
 }
 
+#statbox {
+    display: inline-block;
+    position: absolute;
+    left: 850px;
+    margin-top: 50px;
+    font-size: 30px;
+}
+
 .column {
     background-color: white;
     width: 50px;
@@ -60,7 +68,7 @@ img {
     vertical-align: baseline;
 }
 
-span {
+span, :not(#minutes, #seconds) {
     display: inline-block;
     margin-bottom: 40px;
     margin-top: 0px;
