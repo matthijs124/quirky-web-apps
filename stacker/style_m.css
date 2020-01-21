@@ -58,7 +58,7 @@ ul {
     padding: 0px;
 }
 
-img {
+img :not(.logo) {
     margin: 0px;
     display: block;
 }
@@ -79,4 +79,43 @@ span, :not(#minutes, #seconds) {
 .turn-p {
     font-size: 25px;
     margin: 0;
+}
+
+.logo {
+    position: absolute;
+    width: 35x;
+    height: 35px;
+    top: 22px;
+    left: 125px;
+}
+
+.splash p {
+    font-size: 25px;
+}
+
+#white {
+    background-color: white;
+    border: 3px solid gray;
+}
+
+#white p {
+    margin: 5px;
+}
+
+a {
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 5px;
+    border: 3px solid gray;
+}
+
+a:hover {
+    background-color: lightblue;
+    
+}
+
+#play {
+    margin-bottom: 20px;
 }
